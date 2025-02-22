@@ -68,24 +68,27 @@ def stop_motors():
     
 def main():
     setup()
-    while True:
-        motor = input("which pin do you want to affect")
-        choice = input("""Enter your choice:
-1. set motor to 180
-2. set motor to 0
-3. press a key
-4. exit""")
-        if choice == 1:
-            set_to_180(motor)
-        elif choice == 2:
-            set_to_0(motor)
-        elif choice == 3:
-            press_key(motor)
-        elif choice == 4:
-            break
-        else:
-            print("not a valid choice")
-        
-    stop_motors()
+    try:
+        while True:
+            motor = input("which pin do you want to affect")
+            choice = input("""Enter your choice:
+    1. set motor to 180
+    2. set motor to 0
+    3. press a key
+    4. exit""")
+            if choice == 1:
+                set_to_180(motor)
+            elif choice == 2:
+                set_to_0(motor)
+            elif choice == 3:
+                press_key(motor)
+            elif choice == 4:
+                break
+            else:
+                print("not a valid choice")
+    except:
+        pass
+    finally:
+        stop_motors()
 #endfunc
 
