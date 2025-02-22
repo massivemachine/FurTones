@@ -19,7 +19,7 @@ def set_to_0(note):
     servo.ChangeDutyCycle(0)
 #endfunc
 
-def press_key(note):
+def press_key_from_0(note):
     servo = servo_dict[note]
     servo.ChangeDutyCycle(5)
     sleep(0.5)
@@ -27,6 +27,14 @@ def press_key(note):
     sleep(0.5)
     servo.ChangeDutyCycle(0)
 #endfunc
+
+def press_key_from_12(note):
+    servo = servo_dict[note]
+    servo.ChangeDutyCycle(9)
+    sleep(0.5)
+    servo.ChangeDutyCycle(12)
+    sleep(0.5)
+    servo.ChangeDutyCycle(0)
 
 def setup():
     GPIO.setmode(GPIO.BOARD)
@@ -74,18 +82,15 @@ def main():
         while True:
             motor = input("which pin do you want to affect: ")
             choice = input("""Choose from
-    1. set motor to 180
-    2. set motor to 0
-    3. press a key
-    4. exit
+    1. press a key from position 0
+    2. press a key from position 12
+    3. exit
     enter your choice: """)
             if choice == "1":
-                set_to_180(motor)
+                press_key_from_0(motor)
             elif choice == "2":
-                set_to_0(motor)
+                press_key_from_12(motor)
             elif choice == "3":
-                press_key(motor)
-            elif choice == "4":
                 break
             else:
                 print("not a valid choice")
