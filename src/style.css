@@ -1,0 +1,19 @@
+h1 {
+    position: absolute;
+	top: -50px;
+	width: 100%;
+	text-align: center;
+    z-index: 100;
+	display:block;
+    font-family: 'Nanum Pen Script';
+    font-size: 100px;
+}
+
+#stave {
+    position: relative;
+    z-index: -10;
+	top: 150px;
+	width: 95%;
+	display: block;
+    margin: auto;
+}
