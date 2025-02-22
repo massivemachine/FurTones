@@ -3,7 +3,7 @@ h1 {
 	top: -50px;
 	width: 100%;
 	text-align: center;
-    z-index: 100;
+    z-index: 0;
 	display:block;
     font-family: 'Nanum Pen Script';
     font-size: 100px;
@@ -14,9 +14,14 @@ h1 {
     top: 150px;
 }
 
-#stave {
+.play-pause {
     position: absolute;
-    z-index: -10;
+    z-index: 1;
+    bottom: 100px;
+}
+
+#stave-img {
+    position: absolute;
 	width: 95%;
 	display: block;
     margin: auto;
@@ -26,18 +31,18 @@ h1 {
     position: relative;
     display: grid;
     grid-template-columns: repeat(4, 50px);
-    z-index: 100;
+
     top: 80px;
     left: 175px;
     font-size:0;
+    z-index: 2;
     text-align: center;
 }
 
 .stave-images {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(4, 50px);
-    z-index: 100;
+    grid-template-columns: repeat(4, 69px);
     top: -80px;
     left: 575px;
     font-size:0;
@@ -47,6 +52,7 @@ h1 {
 .note {
     /*background: transparent;
     border: none !important;*/
+    position: relative;
     width: 50px;
     height: 22px;
 }
@@ -54,4 +60,7 @@ h1 {
 .note-im {
     /*background: transparent;
     border: none !important;*/
+
+    min-width: 50px;
+    min-height: 40px;
 }
