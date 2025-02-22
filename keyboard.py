@@ -6,7 +6,7 @@ servo_dict= {} #at some point make the key the note to play
 
 def set_to_180(note):
     servo = servo_dict[note]
-    servo.ChangeDutyCycle(10)
+    servo.ChangeDutyCycle(12)
     sleep(0.5)
     servo.ChangeDutyCycle(0)
 #endfunc
