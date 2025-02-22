@@ -89,8 +89,8 @@ def main():
                 break
             else:
                 print("not a valid choice")
-    except:
-        print("something went wrong")
+    except Exception as e:
+        print("something went wrong: " + e)
     finally:
         stop_motors()
 #endfunc
