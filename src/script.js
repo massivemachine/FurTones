@@ -1,4 +1,4 @@
-note_grid = [[],[]];
+var note_grid = [[],[]];
 
 Array.from(document.getElementsByClassName("note")).forEach(function (note){
     note.addEventListener("click", function() {
@@ -8,5 +8,6 @@ Array.from(document.getElementsByClassName("note")).forEach(function (note){
 });
 
 function noteToCoord(id) {
-
+    coord = [];
+    coord[0]
 }
