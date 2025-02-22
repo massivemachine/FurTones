@@ -9,11 +9,33 @@ h1 {
     font-size: 100px;
 }
 
-#stave {
+.stave {
     position: relative;
+    top: 150px;
+}
+
+#stave {
+    position: absolute;
     z-index: -10;
-	top: 150px;
 	width: 95%;
 	display: block;
     margin: auto;
+}
+
+.stave-buttons {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+    z-index: 100;
+    top: 57px;
+    left: 125px;
+    font-size:0;
+    text-align: center;
+}
+
+.note {
+    /*background: transparent;
+    border: none !important;*/
+    width: 50px;
+    height: 15px;
 }
