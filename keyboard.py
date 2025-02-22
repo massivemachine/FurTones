@@ -25,7 +25,7 @@ def press_key(note):
     sleep(0.5)
     servo.ChangeDutyCycle(2)
     sleep(0.5)
-    servo.changeDutyCycle(0)
+    servo.ChangeDutyCycle(0)
 #endfunc
 
 def setup():
@@ -90,7 +90,7 @@ def main():
             else:
                 print("not a valid choice")
     except Exception as e:
-        print("something went wrong: " + e)
+        print("something went wrong: " + str(e))
     finally:
         stop_motors()
 #endfunc
