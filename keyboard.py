@@ -90,7 +90,7 @@ def main():
             else:
                 print("not a valid choice")
     except:
-        pass
+        print("something went wrong")
     finally:
         stop_motors()
 #endfunc
