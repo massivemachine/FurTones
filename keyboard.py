@@ -144,7 +144,8 @@ def stop_motors():
 def play_notes(notes):
     setup()
     try:
-        pass
+        for chord in notes:
+            pass
     except Exception as e:
         print("something went wrong: " + str(e))
     finally:
