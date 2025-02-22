@@ -13,8 +13,14 @@ console.log("test");
 // note button functionality
 Array.from(document.getElementsByClassName("note")).forEach(function (note){
     note_grid[noteIndex(note.id)] = 0;
+
+    console.log(document.getElementById(note.id + "-im").style.left);
+    document.getElementById(note.id + "-im").style.left = getOffset(note).left + "px";
+    document.getElementById(note.id + "-im").style.top = getOffset(note).top; + "px"
+
     note.addEventListener("click", function() {
         console.log(note.id,note_grid[noteIndex(note.id)]);
+        
         if (note_grid[noteIndex(note.id)] == 0) {
             note_grid[noteIndex(note.id)] = 1;
             document.getElementById(note.id + "-im").innerHTML = "<img src=\"/assets/notes/blue.png\" width=\"70px\" height=\"40px\">";
@@ -41,3 +47,12 @@ function noteIndex(id) {
     coord[1] = id.slice(1,2);
     return coord;
 }
+
+// gets elements x y position relative to page
+function getOffset(el) {
+    const rect = el.getBoundingClientRect();
+    return {
+      left: rect.left + window.scrollX,
+      top: rect.top + window.scrollY
+    };
+  }
