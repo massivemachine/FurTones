@@ -92,3 +92,5 @@ def main():
         stop_motors()
 #endfunc
 
+if __name__ == "__main__":
+    main()
