@@ -10,20 +10,15 @@ servo1.start(0) #start pwm with pulse off
 
 sleep(1)
 
-#turn back to 0 degrees
-servo1.ChangeDutyCycle(2)
-sleep(0.5)
-servo1.ChangeDutyCycle(0)#stop
-
-duty = 2
-
+#duty = 2
 #rotate servo 180 degrees in 18 degree steps
-while duty <= 12:
-    servo1.ChangeDutyCycle(duty)
-    sleep(1)
-    duty += 1
+#while duty <= 10:
+#    servo1.ChangeDutyCycle(duty)
+#    sleep(1)
+#    duty += 1
 
-sleep(2)
+servo1.ChangeDutyCycle(5)
+sleep(0.5)
 
 #turn back to 0 degrees
 servo1.ChangeDutyCycle(2)
