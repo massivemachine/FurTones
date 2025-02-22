@@ -9,5 +9,5 @@ Array.from(document.getElementsByClassName("note")).forEach(function (note){
 
 function noteToCoord(id) {
     coord = [];
-    coord[0]
+    coord[0] = id.splice(0,1)
 }
