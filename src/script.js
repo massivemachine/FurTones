@@ -1,6 +1,16 @@
 var note_grid = [[],[]];
 
+document.getElementById("play").addEventListener("click", function() {
+    console.log("play");
+});
 
+document.getElementById("pause").addEventListener("click", function() {
+    console.log("pause");
+});
+
+console.log("test");
+
+// note button functionality
 Array.from(document.getElementsByClassName("note")).forEach(function (note){
     note_grid[noteIndex(note.id)] = 0;
     note.addEventListener("click", function() {
@@ -16,7 +26,7 @@ Array.from(document.getElementsByClassName("note")).forEach(function (note){
     });
 });
 
-
+// clalculates note grid index from id
 function noteIndex(id) {
     var coord = [];
     switch (id.slice(0,1)) {
