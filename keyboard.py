@@ -21,9 +21,11 @@ def set_to_0(note):
 
 def press_key(note):
     servo = servo_dict[note]
-    servo.ChangeDutyCycle(5)
+    servo.ChangeDutyCycle(4)
     sleep(0.5)
-    servo.ChangeDutyCycle(0)
+    servo.ChangeDutyCycle(2)
+    sleep(0.5)
+    servo.changeDutyCycle(0)
 #endfunc
 
 def setup():
