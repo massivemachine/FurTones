@@ -70,12 +70,13 @@ def main():
     setup()
     try:
         while True:
-            motor = input("which pin do you want to affect")
-            choice = input("""Enter your choice:
+            motor = input("which pin do you want to affect: ")
+            choice = input("""Choose from
     1. set motor to 180
     2. set motor to 0
     3. press a key
-    4. exit""")
+    4. exit
+    enter your choice: """)
             if choice == "1":
                 set_to_180(motor)
             elif choice == "2":
