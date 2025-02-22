@@ -13,6 +13,7 @@ h1 {
 	display:block;
     font-family: 'Nanum Pen Script';
     font-size: 100px;
+    font-weight: bolder;
 }
 
 .stave {
