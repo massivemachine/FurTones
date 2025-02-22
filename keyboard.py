@@ -45,7 +45,7 @@ def setup():
     GPIO.setup(16,GPIO.OUT)
     GPIO.setup(18,GPIO.OUT)
     GPIO.setup(22,GPIO.OUT)
-    GPIO.setup(27,GPIO.OUT)
+    GPIO.setup(36,GPIO.OUT)
     servo_dict["11"] = GPIO.PWM(11,FREQ)
     servo_dict["13"] = GPIO.PWM(13,FREQ)
     servo_dict["15"] = GPIO.PWM(15,FREQ)
@@ -53,7 +53,7 @@ def setup():
     servo_dict["16"] = GPIO.PWM(16,FREQ)
     servo_dict["18"] = GPIO.PWM(18,FREQ)
     servo_dict["22"] = GPIO.PWM(22,FREQ)
-    servo_dict["27"] = GPIO.PWM(27,FREQ)
+    servo_dict["36"] = GPIO.PWM(36,FREQ)
     servo_dict["11"].start(0)
     servo_dict["13"].start(0)
     servo_dict["15"].start(0)
@@ -61,7 +61,7 @@ def setup():
     servo_dict["16"].start(0)
     servo_dict["18"].start(0)
     servo_dict["22"].start(0)
-    servo_dict["27"].start(0)
+    servo_dict["36"].start(0)
 #endfunc
 
 def stop_motors():
@@ -72,7 +72,7 @@ def stop_motors():
     servo_dict["16"].stop()
     servo_dict["18"].stop()
     servo_dict["22"].stop()
-    servo_dict["27"].stop()
+    servo_dict["36"].stop()
     GPIO.cleanup()
 #endfunc
     
