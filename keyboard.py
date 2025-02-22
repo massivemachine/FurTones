@@ -76,13 +76,13 @@ def main():
     2. set motor to 0
     3. press a key
     4. exit""")
-            if choice == 1:
+            if choice == "1":
                 set_to_180(motor)
-            elif choice == 2:
+            elif choice == "2":
                 set_to_0(motor)
-            elif choice == 3:
+            elif choice == "3":
                 press_key(motor)
-            elif choice == 4:
+            elif choice == "4":
                 break
             else:
                 print("not a valid choice")
