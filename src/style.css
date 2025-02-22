@@ -20,6 +20,13 @@
     left: 0px;
 }
 
+#cat-yarn {
+    position: absolute;
+    width: 6%;
+    left: 500px;
+    top: 60px;
+}
+
 h1 {
     position: absolute;
 	top: -50px;
@@ -28,6 +35,21 @@ h1 {
 	display:block;
     font-family: 'Nanum Pen Script';
     font-size: 100px;
+}
+
+#logo {
+    position: absolute;
+    width: 5%;
+    right: 10px;
+}
+
+.credits {
+    font-family: 'Nanum Pen Script';
+    width: 200px;
+    height: 65px;
+    border: dashed;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 #stave {
@@ -77,6 +99,34 @@ h1 {
     min-width: 50px;
     min-height: 40px;
     
+}
+
+#peeking-cat {
+    position: absolute;
+    width: 4%;
+    right: 286px;
+    top: 530px;
+    z-index: 1;
+}
+
+#cat-headphones {
+    position: absolute;
+    width: 6%;
+    right: 50px;
+    top: 425px;
+    z-index: 1;
+}
+
+.info {
+    position: absolute;
+    width: 250px;
+    height: 175px;
+    top: 500px;
+    right: 25px;
+    font-family: 'Nanum Pen Script';
+    border: dashed;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 #e1-im { position: relative; top: 106px; }
