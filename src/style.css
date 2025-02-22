@@ -1,3 +1,9 @@
+.nanum-pen-script-regular {
+    font-family: "Nanum Pen Script", serif;
+    font-weight: 400;
+    font-style: normal;
+}  
+
 h1 {
     position: absolute;
 	top: -50px;
