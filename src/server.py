@@ -9,6 +9,8 @@ def render_app():
 
 @app.post("/")
 def send_to_keyboard():
-    pass
+    note_array = request.get_json()
+    print(note_array)
+    #play_notes(note_array)
 
 app.run()
