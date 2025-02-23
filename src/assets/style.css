@@ -240,6 +240,8 @@ input:checked + .slider:before {
     font-family: 'Nanum Pen Script';
     font-size: 25px;
     text-align: center;
+    
+
 }
 
 #annotated-notes-switch {
