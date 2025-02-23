@@ -192,4 +192,18 @@ function getNotes() {
             console.log("Played note at row: " + row + " col: " + col + " : " + played_notes[row][col]);
         }
     }
+
+    fetch("//10.229.119.96", {
+        method: "POST",
+        body: JSON.stringify({
+        title: "Play",
+        played_notes
+        }),
+        headers: {
+        "Content-type": "application/json; charset=UTF-8"
+        }
+    })
+        .then((response) => response.json())
+        .then((json) => console.log(json));
+
 }
