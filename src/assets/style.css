@@ -216,7 +216,7 @@ input:checked + .slider:before {
 
 .settings {
     position: absolute;
-    top: 615px;
+    top: 600px;
     left: 650px;
     display: grid;
     grid-column-gap: 80px;
@@ -240,8 +240,6 @@ input:checked + .slider:before {
     font-family: 'Nanum Pen Script';
     font-size: 25px;
     text-align: center;
-    
-
 }
 
 #annotated-notes-switch {
