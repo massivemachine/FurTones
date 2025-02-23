@@ -1,7 +1,7 @@
 from flask import Flask, request, make_response, render_template
 from keyboard import play_notes
 
-app = Flask(__name__, template_folder=".",static_folder="./assets/static")
+app = Flask(__name__, template_folder=".",static_folder="./assets")
 
 @app.get("/")
 def render_app():
