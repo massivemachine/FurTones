@@ -2,6 +2,7 @@ var note_grid = [[],[]];
 
 document.getElementById("play").addEventListener("click", function() {
     console.log("play");
+    getNotes();
 });
 
 document.getElementById("pause").addEventListener("click", function() {
@@ -41,6 +42,9 @@ Array.from(document.getElementsByClassName("note")).forEach(function (note){
 
     note.addEventListener("click", function() {
         console.log(note.id,note_grid[noteIndex(note.id)]);
+        console.log(note_grid.length);
+        console.log(note_grid[0].length);
+        console.log(noteIndex(note.id));
         
         if (note_grid[noteIndex(note.id)] == 0) {
             note_grid[noteIndex(note.id)] = 1;
@@ -81,4 +85,16 @@ function getOffset(el) {
       left: rect.left + window.scrollX,
       top: rect.top + window.scrollY
     };
-  }
+}
+
+// return the notes placed on the stave
+function getNotes() {
+    console.log(note_grid.length);
+    console.log(note_grid[0].length);
+    for (var col = 0; col < 8; col++) {
+        for (var row = 0; row < 4; row++) {
+            console.log("value: " + note_grid[[row,col]]);
+        }
+        console.log("next");
+    }
+}
