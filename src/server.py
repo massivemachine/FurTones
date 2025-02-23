@@ -9,9 +9,11 @@ def render_app():
 
 @app.post("/")
 def send_to_keyboard():
-    note_array = request.get_json()
-    print(note_array)
+    note_json = request.get_json()
+    note_array = note_json["played_notes"]
+
     #play_notes(note_array)
+    
 
 @app.post("/stop")
 def halt_playing():
