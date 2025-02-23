@@ -13,8 +13,6 @@ document.getElementById("pause").addEventListener("click", function() {
 document.getElementById("clear").addEventListener("click", function() {
     console.log("clear");
 
-    var notes_counter = 0;
-
     var hex = 'abcdef'.split('');
 
     // copy elements across note_grid into new array
