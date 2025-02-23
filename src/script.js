@@ -89,12 +89,65 @@ function getOffset(el) {
 
 // return the notes placed on the stave
 function getNotes() {
-    console.log(note_grid.length);
-    console.log(note_grid[0].length);
-    for (var col = 0; col < 8; col++) {
-        for (var row = 0; row < 4; row++) {
-            console.log("value: " + note_grid[[row,col]]);
+    var note_grid_copy = [[],[],[],[],[],[],[]];
+
+    var notes_counter = 0;
+
+    var hex = 'abcdef'.split('');
+
+    // copy elements across note_grid into new array
+    for (var row = 0; row < note_grid_copy.length; row++) {
+
+        notes_counter = 0;
+
+        for (var col = 1; col < 10; col++) {
+            note_grid_copy[row][notes_counter] = note_grid[[row,col]];
+            notes_counter++;
         }
-        console.log("next");
+
+        hex.forEach(function(index) {
+            note_grid_copy[row][notes_counter] = note_grid[[row,index]];
+            notes_counter++;
+        });
+
+        note_grid_copy[row][notes_counter] = note_grid[[row,0]];
+
+        notes_counter++;
+    }
+
+    // convert the played notes into their correct letter/rest form
+    var played_notes = [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]];
+
+    for (var col = 0; col < notes_counter; col++) {
+        var rest = true;
+        var col_counter = 0;
+        for (var row = 0; row < note_grid_copy.length; row++) {
+
+            if (note_grid_copy[row][col] == 1) {
+                rest = false;
+
+                switch (row) {
+                    case 0: played_notes[col][col_counter] = "e"; break;
+                    case 1: played_notes[col][col_counter] = "d"; break;
+                    case 2: played_notes[col][col_counter] = "c"; break;
+                    case 3: played_notes[col][col_counter] = "b"; break;
+                    case 4: played_notes[col][col_counter] = "a"; break;
+                    case 5: played_notes[col][col_counter] = "g"; break;
+                    case 6: played_notes[col][col_counter] = "f";
+                }
+
+                col_counter ++;
+            }
+        }
+
+        if (rest) {
+            played_notes[col][0] = 'r';
+        }
+    }
+
+    for (var row = 0; row < notes_counter; row++) {
+        for (var col = 0; col < played_notes[row].length; col++) {
+            console.log("Played note at row: " + row + " col: " + col + " : " + played_notes[row][col]);
+        }
     }
 }
