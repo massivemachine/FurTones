@@ -70,7 +70,7 @@ h1 {
     display: grid;
     grid-template-columns: repeat(4, 50px);
     grid-gap: 26px;
-    top: 225px;
+    top: 137px;
     left: 230px;
     border-left: 50px;
     font-size:0;
@@ -133,34 +133,34 @@ h1 {
     padding: 10px;
 }
 
-#e1-im { position: relative; top: 35px; }
-#d1-im { position: relative; top: 89px; }   /*17*/
-#c1-im { position: relative; top: 71px; }   /*18*/
-#b1-im { position: relative; top: 54px; }   /*17*/
-#a1-im { position: relative; top: 35px; }   /*19*/
-#g1-im { position: relative; top: 17px; }   /*18*/
-#f1-im { position: relative; }              /*17*/
+#e1-im { position: relative; top: 20px; }               /*-86*/
+#d1-im { position: relative; top: 2px; }     /*18*/
+#c1-im { position: relative; top: -16px; }   /*18*/
+#b1-im { position: relative; top: -34px; }   /*18*/
+#a1-im { position: relative; top: -52px; }   /*18*/
+#g1-im { position: relative; top: -70px; }   /*18*/
+#f1-im { position: relative; top: -88px; }   /*18*/
 
-#e2-im { position: relative; top: -174px; left: 10px; }
-#d2-im { position: relative; top: -191px; }
-#c2-im { position: relative; top: -209px; }
-#b2-im { position: relative; top: -226px; }
-#a2-im { position: relative; top: -245px; }
-#g2-im { position: relative; top: -263px; }
-#f2-im { position: relative; top: -280px; }
+#e2-im { position: relative; top: -260px; left: 10px; }  /*280*/
+#d2-im { position: relative; top: -278px; }
+#c2-im { position: relative; top: -296px; }
+#b2-im { position: relative; top: -314px; }
+#a2-im { position: relative; top: -332px; }
+#g2-im { position: relative; top: -350px; }
+#f2-im { position: relative; top: -368px; }
 
-#e3-im { position: relative; top: -454px; left: 8px; }
-#d3-im { position: relative; top: -471px; }
-#c3-im { position: relative; top: -489px; }
-#b3-im { position: relative; top: -506px; }
-#a3-im { position: relative; top: -525px; }
-#g3-im { position: relative; top: -543px; }
-#f3-im { position: relative; top: -560px; }
+#e3-im { position: relative; top: -540px; left: 8px; }
+#d3-im { position: relative; top: -558px; }
+#c3-im { position: relative; top: -576px; }
+#b3-im { position: relative; top: -594px; }
+#a3-im { position: relative; top: -612px; }
+#g3-im { position: relative; top: -630px; }
+#f3-im { position: relative; top: -648px; }
 
-#e4-im { position: relative; top: -734px; left: 8px; }
-#d4-im { position: relative; top: -751px; }
-#c4-im { position: relative; top: -769px; }
-#b4-im { position: relative; top: -786px; }
-#a4-im { position: relative; top: -805px; }
-#g4-im { position: relative; top: -823px; }
-#f4-im { position: relative; top: -840px; }
+#e4-im { position: relative; top: -820px; left: 8px; }
+#d4-im { position: relative; top: -838px; }
+#c4-im { position: relative; top: -856px; }
+#b4-im { position: relative; top: -874px; }
+#a4-im { position: relative; top: -892px; }
+#g4-im { position: relative; top: -910px; }
+#f4-im { position: relative; top: -928px; }
