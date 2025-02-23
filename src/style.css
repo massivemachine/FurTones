@@ -68,10 +68,10 @@ h1 {
 .stave-buttons {
     position: absolute;
     display: grid;
-    grid-template-columns: repeat(4, 50px);
+    grid-template-columns: repeat(16, 50px);
     grid-gap: 26px;
     top: 137px;
-    left: 230px;
+    left: 200px;
     border-left: 50px;
     font-size:0;
     text-align: center;
@@ -164,3 +164,99 @@ h1 {
 #a4-im { position: relative; top: -892px; }
 #g4-im { position: relative; top: -910px; }
 #f4-im { position: relative; top: -928px; }
+
+#e5-im { position: relative; top: -1100px; left: 8px; }
+#d5-im { position: relative; top: -1118px; }
+#c5-im { position: relative; top: -1136px; }
+#b5-im { position: relative; top: -1154px; }
+#a5-im { position: relative; top: -1172px; }
+#g5-im { position: relative; top: -1190px; }
+#f5-im { position: relative; top: -1208px; }
+
+#e6-im { position: relative; top: -1380px; left: 8px; }
+#d6-im { position: relative; top: -1398px; }
+#c6-im { position: relative; top: -1416px; }
+#b6-im { position: relative; top: -1434px; }
+#a6-im { position: relative; top: -1452px; }
+#g6-im { position: relative; top: -1470px; }
+#f6-im { position: relative; top: -1488px; }
+
+#e7-im { position: relative; top: -1660px; left: 8px; }
+#d7-im { position: relative; top: -1678px; }
+#c7-im { position: relative; top: -1696px; }
+#b7-im { position: relative; top: -1714px; }
+#a7-im { position: relative; top: -1732px; }
+#g7-im { position: relative; top: -1750px; }
+#f7-im { position: relative; top: -1768px; }
+
+#e8-im { position: relative; top: -1940px; left: 8px; }
+#d8-im { position: relative; top: -1958px; }
+#c8-im { position: relative; top: -1976px; }
+#b8-im { position: relative; top: -1994px; }
+#a8-im { position: relative; top: -2012px; }
+#g8-im { position: relative; top: -2030px; }
+#f8-im { position: relative; top: -2048px; }
+
+#e9-im { position: relative; top: -2220px; left: 8px; }
+#d9-im { position: relative; top: -2238px; }
+#c9-im { position: relative; top: -2256px; }
+#b9-im { position: relative; top: -2274px; }
+#a9-im { position: relative; top: -2292px; }
+#g9-im { position: relative; top: -2310px; }
+#f9-im { position: relative; top: -2328px; }
+
+#ea-im { position: relative; top: -2500px; left: 8px; }
+#da-im { position: relative; top: -2518px; }
+#ca-im { position: relative; top: -2536px; }
+#ba-im { position: relative; top: -2554px; }
+#aa-im { position: relative; top: -2572px; }
+#ga-im { position: relative; top: -2590px; }
+#fa-im { position: relative; top: -2608px; }
+
+#eb-im { position: relative; top: -2780px; left: 8px; }
+#db-im { position: relative; top: -2798px; }
+#cb-im { position: relative; top: -2816px; }
+#bb-im { position: relative; top: -2834px; }
+#ab-im { position: relative; top: -2852px; }
+#gb-im { position: relative; top: -2870px; }
+#fb-im { position: relative; top: -2888px; }
+
+#ec-im { position: relative; top: -3060px; left: 8px; }
+#dc-im { position: relative; top: -3078px; }
+#cc-im { position: relative; top: -3096px; }
+#bc-im { position: relative; top: -3114px; }
+#ac-im { position: relative; top: -3132px; }
+#gc-im { position: relative; top: -3150px; }
+#fc-im { position: relative; top: -3168px; }
+
+#ed-im { position: relative; top: -3340px; left: 8px; }
+#dd-im { position: relative; top: -3358px; }
+#cd-im { position: relative; top: -3376px; }
+#bd-im { position: relative; top: -3394px; }
+#ad-im { position: relative; top: -3412px; }
+#gd-im { position: relative; top: -3430px; }
+#fd-im { position: relative; top: -3448px; }
+
+#ee-im { position: relative; top: -3620px; left: 8px; }
+#de-im { position: relative; top: -3638px; }
+#ce-im { position: relative; top: -3656px; }
+#be-im { position: relative; top: -3674px; }
+#ae-im { position: relative; top: -3692px; }
+#ge-im { position: relative; top: -3710px; }
+#fe-im { position: relative; top: -3728px; }
+
+#ef-im { position: relative; top: -3900px; left: 8px; }
+#df-im { position: relative; top: -3918px; }
+#cf-im { position: relative; top: -3936px; }
+#bf-im { position: relative; top: -3954px; }
+#af-im { position: relative; top: -3972px; }
+#gf-im { position: relative; top: -3990px; }
+#ff-im { position: relative; top: -4008px; }
+
+#e0-im { position: relative; top: -4180px; left: 8px; }
+#d0-im { position: relative; top: -4198px; }
+#c0-im { position: relative; top: -4216px; }
+#b0-im { position: relative; top: -4234px; }
+#a0-im { position: relative; top: -4252px; }
+#g0-im { position: relative; top: -4270px; }
+#f0-im { position: relative; top: -4288px; }
