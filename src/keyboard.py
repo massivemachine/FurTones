@@ -166,5 +166,5 @@ def play_notes(notes):
 #endfunc
 
 if __name__ == "__main__":
-    play_notes(["f1","g","a","b","r","c","d","e","f2"])
+    play_notes([["f1"],["g"],["a"],["b"],["r"],["c"],["d"],["e"],["f2"]])
     #test()
