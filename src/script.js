@@ -27,9 +27,11 @@ document.getElementById("clear").addEventListener("click", function() {
 
         hex.forEach(function(index) {
             note_grid[[row,index]] = 0;
+            document.getElementById(indexNote([row,index]) + "-im").innerHTML = "";
         });
 
         note_grid[[row,0]] = 0;
+        document.getElementById(indexNote([row,0]) + "-im").innerHTML = "";
 
     }
     
