@@ -70,7 +70,7 @@ function noteIndex(id) {
         case "g": coord[0] = 5; break;
         case "f": coord[0] = 6;
     }
-    coord[1] = id.slice(1,2);
+    coord[1] = id.slice(1,2) - 1;
     return coord;
 }
 
