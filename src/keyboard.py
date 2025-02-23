@@ -106,6 +106,10 @@ def test():
 #endfunc
 
 def setup():
+    try:
+        GPIO.cleanup()
+    except Exception:
+        pass
     GPIO.setmode(GPIO.BOARD)
     GPIO.setup(11,GPIO.OUT)
     GPIO.setup(13,GPIO.OUT)
