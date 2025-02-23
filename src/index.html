@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script type="module" src="./script.js"></script>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="icon" type="image/x-icon" href="/assets/cat-icon.jpg">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+        <title>FurTones</title>
+    </head>
+    <body>
+        <div class="back-layer">
+            <h1 id="heading">FurTones</h1>
+            <img src="/assets/cats/cat-yarn.png" id="cat-yarn">
+            <div class="credits"><p id="credits">Built by Max, Mayukhi and Oli for AstonHack25.</p></div>
+
+            <img src="/assets/stave.jpeg" id="stave">
+
+            <img src="/assets/cats/peeking-cat.png" id="peeking-cat">
+            <img src="/assets/cats/cat-headphones.png" id="cat-headphones">
+            <div class="info"><p id="info">
+                <u>How to play</u>
+                <br>
+                1. Click on the stave to draw in notes.
+                <br>
+                2. Press the 'Play' button to send them to the keyboard and watch your creations play out!
+                <br>
+                3. Press the 'Pause' button to stop the keyboard from playing.
+                <br>
+                4. Press the 'Clear' button to remove all the notes from the stave so you can start again!
+                <br>
+            </p></div>
+        </div>
+
+        <div class="middle-layer">
+            <div class="stave-images">
+                <div class="row1">
+                    <div class="note-im" id="e1-im"></div>
+                    <div class="note-im" id="d1-im"></div>
+                    <div class="note-im" id="c1-im"></div>
+                    <div class="note-im" id="b1-im"></div>
+                    <div class="note-im" id="a1-im"></div>
+                    <div class="note-im" id="g1-im"></div>
+                    <div class="note-im" id="f1-im"></div>
+                </div>
+                <div class="row2">
+                    <div class="note-im" id="e2-im"></div>
+                    <div class="note-im" id="d2-im"></div>
+                    <div class="note-im" id="c2-im"></div>
+                    <div class="note-im" id="b2-im"></div>
+                    <div class="note-im" id="a2-im"></div>
+                    <div class="note-im" id="g2-im"></div>
+                    <div class="note-im" id="f2-im"></div>
+                </div>
+                <div class="row3">
+                    <div class="note-im" id="e3-im"></div>
+                    <div class="note-im" id="d3-im"></div>
+                    <div class="note-im" id="c3-im"></div>
+                    <div class="note-im" id="b3-im"></div>
+                    <div class="note-im" id="a3-im"></div>
+                    <div class="note-im" id="g3-im"></div>
+                    <div class="note-im" id="f3-im"></div>
+                </div>
+                <div class="row4">
+                    <div class="note-im" id="e4-im"></div>
+                    <div class="note-im" id="d4-im"></div>
+                    <div class="note-im" id="c4-im"></div>
+                    <div class="note-im" id="b4-im"></div>
+                    <div class="note-im" id="a4-im"></div>
+                    <div class="note-im" id="g4-im"></div>
+                    <div class="note-im" id="f4-im"></div>
+                </div>
+                <div class="row5">
+                    <div class="note-im" id="e5-im"></div>
+                    <div class="note-im" id="d5-im"></div>
+                    <div class="note-im" id="c5-im"></div>
+                    <div class="note-im" id="b5-im"></div>
+                    <div class="note-im" id="a5-im"></div>
+                    <div class="note-im" id="g5-im"></div>
+                    <div class="note-im" id="f5-im"></div>
+                </div>
+                <div class="row6">
+                    <div class="note-im" id="e6-im"></div>
+                    <div class="note-im" id="d6-im"></div>
+                    <div class="note-im" id="c6-im"></div>
+                    <div class="note-im" id="b6-im"></div>
+                    <div class="note-im" id="a6-im"></div>
+                    <div class="note-im" id="g6-im"></div>
+                    <div class="note-im" id="f6-im"></div>
+                </div>
+                <div class="row7">
+                    <div class="note-im" id="e7-im"></div>
+                    <div class="note-im" id="d7-im"></div>
+                    <div class="note-im" id="c7-im"></div>
+                    <div class="note-im" id="b7-im"></div>
+                    <div class="note-im" id="a7-im"></div>
+                    <div class="note-im" id="g7-im"></div>
+                    <div class="note-im" id="f7-im"></div>
+                </div>
+                <div class="row8">
+                    <div class="note-im" id="e8-im"></div>
+                    <div class="note-im" id="d8-im"></div>
+                    <div class="note-im" id="c8-im"></div>
+                    <div class="note-im" id="b8-im"></div>
+                    <div class="note-im" id="a8-im"></div>
+                    <div class="note-im" id="g8-im"></div>
+                    <div class="note-im" id="f8-im"></div>
+                </div>
+                <div class="row9">
+                    <div class="note-im" id="e9-im"></div>
+                    <div class="note-im" id="d9-im"></div>
+                    <div class="note-im" id="c9-im"></div>
+                    <div class="note-im" id="b9-im"></div>
+                    <div class="note-im" id="a9-im"></div>
+                    <div class="note-im" id="g9-im"></div>
+                    <div class="note-im" id="f9-im"></div>
+                </div>
+                <div class="rowa">
+                    <div class="note-im" id="ea-im"></div>
+                    <div class="note-im" id="da-im"></div>
+                    <div class="note-im" id="ca-im"></div>
+                    <div class="note-im" id="ba-im"></div>
+                    <div class="note-im" id="aa-im"></div>
+                    <div class="note-im" id="ga-im"></div>
+                    <div class="note-im" id="fa-im"></div>
+                </div>
+                <div class="rowb">
+                    <div class="note-im" id="eb-im"></div>
+                    <div class="note-im" id="db-im"></div>
+                    <div class="note-im" id="cb-im"></div>
+                    <div class="note-im" id="bb-im"></div>
+                    <div class="note-im" id="ab-im"></div>
+                    <div class="note-im" id="gb-im"></div>
+                    <div class="note-im" id="fb-im"></div>
+                </div>
+                <div class="rowc">
+                    <div class="note-im" id="ec-im"></div>
+                    <div class="note-im" id="dc-im"></div>
+                    <div class="note-im" id="cc-im"></div>
+                    <div class="note-im" id="bc-im"></div>
+                    <div class="note-im" id="ac-im"></div>
+                    <div class="note-im" id="gc-im"></div>
+                    <div class="note-im" id="fc-im"></div>
+                </div>
+                <div class="rowd">
+                    <div class="note-im" id="ed-im"></div>
+                    <div class="note-im" id="dd-im"></div>
+                    <div class="note-im" id="cd-im"></div>
+                    <div class="note-im" id="bd-im"></div>
+                    <div class="note-im" id="ad-im"></div>
+                    <div class="note-im" id="gd-im"></div>
+                    <div class="note-im" id="fd-im"></div>
+                </div>
+                <div class="rowe">
+                    <div class="note-im" id="ee-im"></div>
+                    <div class="note-im" id="de-im"></div>
+                    <div class="note-im" id="ce-im"></div>
+                    <div class="note-im" id="be-im"></div>
+                    <div class="note-im" id="ae-im"></div>
+                    <div class="note-im" id="ge-im"></div>
+                    <div class="note-im" id="fe-im"></div>
+                </div>
+                <div class="rowf">
+                    <div class="note-im" id="ef-im"></div>
+                    <div class="note-im" id="df-im"></div>
+                    <div class="note-im" id="cf-im"></div>
+                    <div class="note-im" id="bf-im"></div>
+                    <div class="note-im" id="af-im"></div>
+                    <div class="note-im" id="gf-im"></div>
+                    <div class="note-im" id="ff-im"></div>
+                </div>
+                <div class="row0">
+                    <div class="note-im" id="e0-im"></div>
+                    <div class="note-im" id="d0-im"></div>
+                    <div class="note-im" id="c0-im"></div>
+                    <div class="note-im" id="b0-im"></div>
+                    <div class="note-im" id="a0-im"></div>
+                    <div class="note-im" id="g0-im"></div>
+                    <div class="note-im" id="f0-im"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="top-layer">
+            <div class="stave-buttons">
+                <div class="row1">
+                    <button class="note" id="e1"></button>
+                    <button class="note" id="d1"></button>
+                    <button class="note" id="c1"></button>
+                    <button class="note" id="b1"></button>
+                    <button class="note" id="a1"></button>
+                    <button class="note" id="g1"></button>
+                    <button class="note" id="f1"></button>
+                </div>
+                <div class="row2">
+                    <button class="note" id="e2"></button>
+                    <button class="note" id="d2"></button>
+                    <button class="note" id="c2"></button>
+                    <button class="note" id="b2"></button>
+                    <button class="note" id="a2"></button>
+                    <button class="note" id="g2"></button>
+                    <button class="note" id="f2"></button>
+                </div>
+                <div class="row3">
+                    <button class="note" id="e3"></button>
+                    <button class="note" id="d3"></button>
+                    <button class="note" id="c3"></button>
+                    <button class="note" id="b3"></button>
+                    <button class="note" id="a3"></button>
+                    <button class="note" id="g3"></button>
+                    <button class="note" id="f3"></button>
+                </div>
+                <div class="row4">
+                    <button class="note" id="e4"></button>
+                    <button class="note" id="d4"></button>
+                    <button class="note" id="c4"></button>
+                    <button class="note" id="b4"></button>
+                    <button class="note" id="a4"></button>
+                    <button class="note" id="g4"></button>
+                    <button class="note" id="f4"></button>
+                </div>
+                <div class="row5">
+                    <button class="note" id="e5"></button>
+                    <button class="note" id="d5"></button>
+                    <button class="note" id="c5"></button>
+                    <button class="note" id="b5"></button>
+                    <button class="note" id="a5"></button>
+                    <button class="note" id="g5"></button>
+                    <button class="note" id="f5"></button>
+                </div>
+                <div class="row6">
+                    <button class="note" id="e6"></button>
+                    <button class="note" id="d6"></button>
+                    <button class="note" id="c6"></button>
+                    <button class="note" id="b6"></button>
+                    <button class="note" id="a6"></button>
+                    <button class="note" id="g6"></button>
+                    <button class="note" id="f6"></button>
+                </div>
+                <div class="row7">
+                    <button class="note" id="e7"></button>
+                    <button class="note" id="d7"></button>
+                    <button class="note" id="c7"></button>
+                    <button class="note" id="b7"></button>
+                    <button class="note" id="a7"></button>
+                    <button class="note" id="g7"></button>
+                    <button class="note" id="f7"></button>
+                </div>
+                <div class="row8">
+                    <button class="note" id="e8"></button>
+                    <button class="note" id="d8"></button>
+                    <button class="note" id="c8"></button>
+                    <button class="note" id="b8"></button>
+                    <button class="note" id="a8"></button>
+                    <button class="note" id="g8"></button>
+                    <button class="note" id="f8"></button>
+                </div>
+                <div class="row9">
+                    <button class="note" id="e9"></button>
+                    <button class="note" id="d9"></button>
+                    <button class="note" id="c9"></button>
+                    <button class="note" id="b9"></button>
+                    <button class="note" id="a9"></button>
+                    <button class="note" id="g9"></button>
+                    <button class="note" id="f9"></button>
+                </div>
+                <div class="rowa">
+                    <button class="note" id="ea"></button>
+                    <button class="note" id="da"></button>
+                    <button class="note" id="ca"></button>
+                    <button class="note" id="ba"></button>
+                    <button class="note" id="aa"></button>
+                    <button class="note" id="ga"></button>
+                    <button class="note" id="fa"></button>
+                </div>
+                <div class="rowb">
+                    <button class="note" id="eb"></button>
+                    <button class="note" id="db"></button>
+                    <button class="note" id="cb"></button>
+                    <button class="note" id="bb"></button>
+                    <button class="note" id="ab"></button>
+                    <button class="note" id="gb"></button>
+                    <button class="note" id="fb"></button>
+                </div>
+                <div class="rowc">
+                    <button class="note" id="ec"></button>
+                    <button class="note" id="dc"></button>
+                    <button class="note" id="cc"></button>
+                    <button class="note" id="bc"></button>
+                    <button class="note" id="ac"></button>
+                    <button class="note" id="gc"></button>
+                    <button class="note" id="fc"></button>
+                </div>
+                <div class="rowd">
+                    <button class="note" id="ed"></button>
+                    <button class="note" id="dd"></button>
+                    <button class="note" id="cd"></button>
+                    <button class="note" id="bd"></button>
+                    <button class="note" id="ad"></button>
+                    <button class="note" id="gd"></button>
+                    <button class="note" id="fd"></button>
+                </div>
+                <div class="rowe">
+                    <button class="note" id="ee"></button>
+                    <button class="note" id="de"></button>
+                    <button class="note" id="ce"></button>
+                    <button class="note" id="be"></button>
+                    <button class="note" id="ae"></button>
+                    <button class="note" id="ge"></button>
+                    <button class="note" id="fe"></button>
+                </div>
+                <div class="rowf">
+                    <button class="note" id="ef"></button>
+                    <button class="note" id="df"></button>
+                    <button class="note" id="cf"></button>
+                    <button class="note" id="bf"></button>
+                    <button class="note" id="af"></button>
+                    <button class="note" id="gf"></button>
+                    <button class="note" id="ff"></button>
+                </div>
+                <div class="row0">
+                    <button class="note" id="e0"></button>
+                    <button class="note" id="d0"></button>
+                    <button class="note" id="c0"></button>
+                    <button class="note" id="b0"></button>
+                    <button class="note" id="a0"></button>
+                    <button class="note" id="g0"></button>
+                    <button class="note" id="f0"></button>
+                </div>
+            </div>
+            
+            <div class="play-pause">
+                <button id="play"> <img src="/assets/play.png" id="play-img" width="50px" height="50px"> </button>
+                <button id="pause"> <img src="/assets/pause.png" id="pause-img" width="50px" height="50px"> </button>
+                <button id="clear"> <img src="/assets/bin.png" id="clear-img" width="50px" height="50px"> </button>
+            </div>
+                
+        </div>
+    </body>
+</html>
