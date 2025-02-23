@@ -12,8 +12,7 @@ def send_to_keyboard():
     note_json = request.get_json()
     note_array = note_json["played_notes"]
     print(note_array)
-
-    #play_notes(note_array)
+    play_notes(note_array)
 
 
 @app.post("/stop")
