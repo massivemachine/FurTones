@@ -18,6 +18,27 @@ Array.from(document.getElementsByClassName("note")).forEach(function (note){
     document.getElementById(note.id + "-im").style.left = getOffset(note).left + "px";
     document.getElementById(note.id + "-im").style.top = getOffset(note).top; + "px"
 
+    note.addEventListener("mouseover", function() {
+        console.log(note.id,note_grid[noteIndex(note.id)]);
+        
+        if (note_grid[noteIndex(note.id)] == 0) {
+            if (note.id.slice(0,1) != 'f') {
+                document.getElementById(note.id + "-im").innerHTML = "<img src=\"/assets/notes/clear/"+ note.id.slice(0,1) + "-clear.png\" width=\"70px\" height=\"40px\">";
+            } else {
+                document.getElementById(note.id + "-im").innerHTML = "<img src=\"/assets/notes/clear/"+ note.id.slice(0,1) + "1-clear.png\" width=\"70px\" height=\"40px\">";
+            }
+        }
+    });
+
+    note.addEventListener("mouseout", function() {
+        console.log(note.id,note_grid[noteIndex(note.id)]);
+        
+        if (note_grid[noteIndex(note.id)] == 0) {
+            document.getElementById(note.id + "-im").innerHTML = "";
+        }
+    });
+
+
     note.addEventListener("click", function() {
         console.log(note.id,note_grid[noteIndex(note.id)]);
         
@@ -34,6 +55,7 @@ Array.from(document.getElementsByClassName("note")).forEach(function (note){
         }
         
     });
+
 });
 
 // clalculates note grid index from id
