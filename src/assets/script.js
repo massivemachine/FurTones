@@ -193,7 +193,7 @@ function getNotes() {
         }
     }
 
-    fetch("//10.229.119.252:5000", {
+    fetch("//10.229.119.218:5000", {
         method: "POST",
         body: JSON.stringify({
         title: "Play",
