@@ -236,6 +236,8 @@ input:checked + .slider:before {
     grid-row-start: 1;
     grid-row-end: 2;
     text-align: center;
+    
+
 }
 
 #annotated-notes-switch {
