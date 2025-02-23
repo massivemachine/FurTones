@@ -7,6 +7,32 @@ document.getElementById("play").addEventListener("click", function() {
 
 document.getElementById("pause").addEventListener("click", function() {
     console.log("pause");
+    // TODO: send request to pause
+});
+
+document.getElementById("clear").addEventListener("click", function() {
+    console.log("clear");
+
+    var notes_counter = 0;
+
+    var hex = 'abcdef'.split('');
+
+    // copy elements across note_grid into new array
+    for (var row = 0; row < 7; row++) {
+
+        for (var col = 1; col < 10; col++) {
+            note_grid[[row,col]] = 0;
+            document.getElementById(indexNote([row,col]) + "-im").innerHTML = "";
+        }
+
+        hex.forEach(function(index) {
+            note_grid[[row,index]] = 0;
+        });
+
+        note_grid[[row,0]] = 0;
+
+    }
+    
 });
 
 console.log("test");
@@ -76,6 +102,22 @@ function noteIndex(id) {
     }
     coord[1] = id.slice(1,2);
     return coord;
+}
+
+// clalculates note grid index from id
+function indexNote(coord) {
+    var note = "";
+    switch (coord[0]) {
+        case 0: note += "e"; break;
+        case 1: note += "d"; break;
+        case 2: note += "c"; break;
+        case 3: note += "b"; break;
+        case 4: note += "a"; break;
+        case 5: note += "g"; break;
+        case 6: note += "f";
+    }
+    note += coord[1];
+    return note;
 }
 
 // gets elements x y position relative to page
