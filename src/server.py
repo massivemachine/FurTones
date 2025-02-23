@@ -1,7 +1,8 @@
 from flask import Flask, request, make_response, render_template
-from keyboard import play_notes
+from keyboard import play_notes, setup, stop_motors
 
 app = Flask(__name__, template_folder=".",static_folder="./assets")
+setup()
 
 @app.get("/")
 def render_app():
@@ -18,3 +19,7 @@ def send_to_keyboard():
 @app.post("/stop")
 def halt_playing():
     pass
+
+@app.teardown_appcontext
+def tear_down():
+    stop_motors()

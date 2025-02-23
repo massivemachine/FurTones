@@ -144,7 +144,6 @@ def stop_motors():
 
 
 def play_notes(notes):
-    setup()
     try:
         for chord in notes:
             for note in chord:
@@ -158,10 +157,10 @@ def play_notes(notes):
         #each column has an array containing the notes in that column
     except Exception as e:
         print("something went wrong: " + str(e))
-    finally:
-        stop_motors()
 #endfunc
 
 if __name__ == "__main__":
+    setup()
     play_notes([["f"],["g"],["a"],["b"],["r"],["c"],["d"],["e"],["f"]])
+    stop_motors()
     #test()
