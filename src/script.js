@@ -23,7 +23,11 @@ Array.from(document.getElementsByClassName("note")).forEach(function (note){
         
         if (note_grid[noteIndex(note.id)] == 0) {
             note_grid[noteIndex(note.id)] = 1;
-            document.getElementById(note.id + "-im").innerHTML = "<img src=\"/assets/notes/blue.png\" width=\"70px\" height=\"40px\">";
+            if (note.id.slice(0,1) != 'f') {
+                document.getElementById(note.id + "-im").innerHTML = "<img src=\"/assets/notes/solid/"+ note.id.slice(0,1) + ".png\" width=\"70px\" height=\"40px\">";
+            } else {
+                document.getElementById(note.id + "-im").innerHTML = "<img src=\"/assets/notes/solid/"+ note.id.slice(0,2) + ".png\" width=\"70px\" height=\"40px\">";
+            }
         } else {
             note_grid[noteIndex(note.id)] = 0;
             document.getElementById(note.id + "-im").innerHTML = "";
