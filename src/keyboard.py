@@ -3,7 +3,7 @@ from time import sleep
 
 FREQ = 50 #in hz
 servo_dict= {} #at some point make the key the note to play
-notes_to_press_from_zero = ["f1","g","e","c","d"]
+notes_to_press_from_zero = ["f","g","e","c","d"]
 REST = "r"
 
 def set_to_180(note):
@@ -115,33 +115,30 @@ def setup():
     GPIO.setup(18,GPIO.OUT)
     GPIO.setup(22,GPIO.OUT)
     GPIO.setup(36,GPIO.OUT)
-    servo_dict["f1"] = GPIO.PWM(11,FREQ)
+    servo_dict["f"] = GPIO.PWM(11,FREQ)
     servo_dict["g"] = GPIO.PWM(13,FREQ)
     servo_dict["a"] = GPIO.PWM(15,FREQ)
     servo_dict["e"] = GPIO.PWM(37,FREQ)
-    servo_dict["f2"] = GPIO.PWM(16,FREQ)
     servo_dict["b"] = GPIO.PWM(18,FREQ)
     servo_dict["c"] = GPIO.PWM(22,FREQ)
     servo_dict["d"] = GPIO.PWM(36,FREQ)
-    servo_dict["f1"].start(0)
+    servo_dict["f"].start(0)
     servo_dict["g"].start(0)
     servo_dict["a"].start(0)
     servo_dict["b"].start(0)
     servo_dict["c"].start(0)
     servo_dict["d"].start(0)
     servo_dict["e"].start(0)
-    servo_dict["f2"].start(0)
 #endfunc
 
 def stop_motors():
-    servo_dict["f1"].stop()
+    servo_dict["f"].stop()
     servo_dict["g"].stop()
     servo_dict["a"].stop()
     servo_dict["b"].stop()
     servo_dict["c"].stop()
     servo_dict["d"].stop()
     servo_dict["e"].stop()
-    servo_dict["f2"].stop()
     GPIO.cleanup()
 #endfunc
 
@@ -166,5 +163,5 @@ def play_notes(notes):
 #endfunc
 
 if __name__ == "__main__":
-    play_notes([["f1"],["g"],["a"],["b"],["r"],["c"],["d"],["e"],["f2"]])
+    play_notes([["f"],["g"],["a"],["b"],["r"],["c"],["d"],["e"],["f"]])
     #test()
