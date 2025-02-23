@@ -51,6 +51,7 @@ h1 {
     font-family: 'Nanum Pen Script';
     width: 200px;
     height: 65px;
+    top: 500px;
     border: dashed;
     border-radius: 0px;
     padding: 10px;
