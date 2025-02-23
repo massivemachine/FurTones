@@ -1,4 +1,71 @@
 var note_grid = [[],[]];
+var labels = false;
+var audio = false;
+
+document.getElementById("annotated?").addEventListener("change", function() {
+    labels = document.getElementById("annotated?").checked;
+
+    var hex = 'abcdef'.split('');
+
+    for (var row = 0; row < 7; row++) {
+
+        for (var col = 1; col < 10; col++) {
+            if (note_grid[[row,col]] == 1) {
+                if (!labels)
+                    if (indexNote([row,col]).slice(0,1) != 'f') {
+                        document.getElementById(indexNote([row,col]) + "-im").innerHTML = "<img src=\"/assets/notes/solid/"+ indexNote([row,col]).slice(0,1) + ".png\" width=\"70px\" height=\"40px\">";
+                    } else {
+                        document.getElementById(indexNote([row,col]) + "-im").innerHTML = "<img src=\"/assets/notes/solid/"+ indexNote([row,col]).slice(0,1) + "1.png\" width=\"70px\" height=\"40px\">";
+                    }
+                else {
+                    if (indexNote([row,col]).slice(0,1) != 'f') {
+                        document.getElementById(indexNote([row,col]) + "-im").innerHTML = "<img src=\"/assets/notes/solid-labelled/"+ indexNote([row,col]).slice(0,1) + "-labelled.png\" width=\"70px\" height=\"40px\">";
+                    } else {
+                        document.getElementById(indexNote([row,col]) + "-im").innerHTML = "<img src=\"/assets/notes/solid-labelled/"+ indexNote([row,col]).slice(0,1) + "1-labelled.png\" width=\"70px\" height=\"40px\">";
+                    }
+                }
+            }
+        }
+
+        hex.forEach(function(index) {
+            if (note_grid[[row,index]] == 1) {
+                if (!labels)
+                    if (indexNote([row,col]).slice(0,1) != 'f') {
+                        document.getElementById(indexNote([row,col]) + "-im").innerHTML = "<img src=\"/assets/notes/solid/"+ indexNote([row,col]).slice(0,1) + "-.png\" width=\"70px\" height=\"40px\">";
+                    } else {
+                        document.getElementById(indexNote([row,col]) + "-im").innerHTML = "<img src=\"/assets/notes/solid/"+ indexNote([row,col]).slice(0,1) + "1.png\" width=\"70px\" height=\"40px\">";
+                    }
+                else {
+                    if (indexNote([row,col]).slice(0,1) != 'f') {
+                        document.getElementById(indexNote([row,col]) + "-im").innerHTML = "<img src=\"/assets/notes/solid-labelled/"+ indexNote([row,col]).slice(0,1) + "-labelled.png\" width=\"70px\" height=\"40px\">";
+                    } else {
+                        document.getElementById(indexNote([row,col]) + "-im").innerHTML = "<img src=\"/assets/notes/solid-labelled/"+ indexNote([row,col]).slice(0,1) + "1-labelled.png\" width=\"70px\" height=\"40px\">";
+                    }
+                }
+            }
+        });
+
+        if (note_grid[[row,0]] == 1) {
+            if (!labels)
+                if (indexNote([row,col]).slice(0,1) != 'f') {
+                    document.getElementById(indexNote([row,col]) + "-im").innerHTML = "<img src=\"/assets/notes/solid/"+ indexNote([row,col]).slice(0,1) + ".png\" width=\"70px\" height=\"40px\">";
+                } else {
+                    document.getElementById(indexNote([row,col]) + "-im").innerHTML = "<img src=\"/assets/notes/solid/"+ indexNote([row,col]).slice(0,1) + "1.png\" width=\"70px\" height=\"40px\">";
+                }
+            else {
+                if (indexNote([row,col]).slice(0,1) != 'f') {
+                    document.getElementById(indexNote([row,col]) + "-im").innerHTML = "<img src=\"/assets/notes/solid-labelled/"+ indexNote([row,col]).slice(0,1) + "-labelled.png\" width=\"70px\" height=\"40px\">";
+                } else {
+                    document.getElementById(indexNote([row,col]) + "-im").innerHTML = "<img src=\"/assets/notes/solid-labelled/"+ indexNote([row,col]).slice(0,1) + "1-labelled.png\" width=\"70px\" height=\"40px\">";
+                }
+            }
+        }
+    }
+});
+
+document.getElementById("sound?").addEventListener("change", function() {
+    audio = document.getElementById("sound?").checked;
+});
 
 document.getElementById("play").addEventListener("click", function() {
     console.log("play");
@@ -15,7 +82,6 @@ document.getElementById("clear").addEventListener("click", function() {
 
     var hex = 'abcdef'.split('');
 
-    // copy elements across note_grid into new array
     for (var row = 0; row < 7; row++) {
 
         for (var col = 1; col < 10; col++) {
@@ -49,12 +115,20 @@ Array.from(document.getElementsByClassName("note")).forEach(function (note){
         console.log(note.id,note_grid[noteIndex(note.id)]);
         
         if (note_grid[noteIndex(note.id)] == 0) {
-            if (note.id.slice(0,1) != 'f') {
-                document.getElementById(note.id + "-im").innerHTML = "<img src=\"/assets/notes/clear/"+ note.id.slice(0,1) + "-clear.png\" width=\"70px\" height=\"40px\">";
+            if (!labels) {
+                if (note.id.slice(0,1) != 'f') {
+                    document.getElementById(note.id + "-im").innerHTML = "<img src=\"/assets/notes/clear/"+ note.id.slice(0,1) + "-clear.png\" width=\"70px\" height=\"40px\">";
+                } else {
+                    document.getElementById(note.id + "-im").innerHTML = "<img src=\"/assets/notes/clear/"+ note.id.slice(0,1) + "1-clear.png\" width=\"70px\" height=\"40px\">";
+                }
             } else {
-                document.getElementById(note.id + "-im").innerHTML = "<img src=\"/assets/notes/clear/"+ note.id.slice(0,1) + "1-clear.png\" width=\"70px\" height=\"40px\">";
+                if (note.id.slice(0,1) != 'f') {
+                    document.getElementById(note.id + "-im").innerHTML = "<img src=\"/assets/notes/clear-labelled/"+ note.id.slice(0,1) + "-clear-labelled.png\" width=\"70px\" height=\"40px\">";
+                } else {
+                    document.getElementById(note.id + "-im").innerHTML = "<img src=\"/assets/notes/clear-labelled/"+ note.id.slice(0,1) + "1-clear-labelled.png\" width=\"70px\" height=\"40px\">";
+                }
             }
-        }
+        } 
     });
 
     note.addEventListener("mouseout", function() {
@@ -74,10 +148,25 @@ Array.from(document.getElementsByClassName("note")).forEach(function (note){
         
         if (note_grid[noteIndex(note.id)] == 0) {
             note_grid[noteIndex(note.id)] = 1;
-            if (note.id.slice(0,1) != 'f') {
-                document.getElementById(note.id + "-im").innerHTML = "<img src=\"/assets/notes/solid/"+ note.id.slice(0,1) + ".png\" width=\"70px\" height=\"40px\">";
+
+            if (audio) {
+                var musicNote = new Audio("/assets/notes/audio/"+ note.id.slice(0,1) + ".mp3");
+                console.log("playing" + note.id.slice(0,1));
+                musicNote.play();
+            }
+
+            if (!labels) {
+                if (note.id.slice(0,1) != 'f') {
+                    document.getElementById(note.id + "-im").innerHTML = "<img src=\"/assets/notes/solid/"+ note.id.slice(0,1) + ".png\" width=\"70px\" height=\"40px\">";
+                } else {
+                    document.getElementById(note.id + "-im").innerHTML = "<img src=\"/assets/notes/solid/"+ note.id.slice(0,1) + "1.png\" width=\"70px\" height=\"40px\">";
+                }
             } else {
-                document.getElementById(note.id + "-im").innerHTML = "<img src=\"/assets/notes/solid/"+ note.id.slice(0,1) + "1.png\" width=\"70px\" height=\"40px\">";
+                if (note.id.slice(0,1) != 'f') {
+                    document.getElementById(note.id + "-im").innerHTML = "<img src=\"/assets/notes/solid-labelled/"+ note.id.slice(0,1) + "-labelled.png\" width=\"70px\" height=\"40px\">";
+                } else {
+                    document.getElementById(note.id + "-im").innerHTML = "<img src=\"/assets/notes/solid-labelled/"+ note.id.slice(0,1) + "1-labelled.png\" width=\"70px\" height=\"40px\">";
+                }
             }
         } else {
             note_grid[noteIndex(note.id)] = 0;
@@ -88,7 +177,7 @@ Array.from(document.getElementsByClassName("note")).forEach(function (note){
 
 });
 
-// clalculates note grid index from id
+// calculates note grid index from id
 function noteIndex(id) {
     var coord = [];
     switch (id.slice(0,1)) {
