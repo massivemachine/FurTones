@@ -1,11 +1,11 @@
 from flask import Flask, request, make_response, render_template
 from keyboard import play_notes
 
-app = Flask(__name__, template_folder=".")
+app = Flask(__name__, template_folder=".",static_folder=".")
 
 @app.get("/")
 def render_app():
-    return make_response(render_template("index.html"))
+    return make_response("index.html")
 
 @app.post("/")
 def send_to_keyboard():
