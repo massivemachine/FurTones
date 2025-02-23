@@ -87,8 +87,25 @@ h1 {
 
 .play-pause {
     position: absolute;
-    top: 500px;
-    left: 300px;
+    top: 600px;
+    left: 600px;
+    display: grid;
+    grid-gap: 50px;
+}
+
+#play {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+#pause {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+#clear {
+    grid-column-start: 3;
+    grid-column-end: 4;
 }
 
 .stave-images {
@@ -108,7 +125,7 @@ h1 {
 #peeking-cat {
     position: absolute;
     width: 4%;
-    right: 286px;
+    right: 366px;
     top: 630px;
     z-index: 1;
 }
@@ -123,7 +140,7 @@ h1 {
 
 .info {
     position: absolute;
-    width: 250px;
+    width: 330px;
     height: 175px;
     top: 600px;
     right: 25px;
