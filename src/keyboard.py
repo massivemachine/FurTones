@@ -163,7 +163,5 @@ def play_notes(notes):
 #endfunc
 
 if __name__ == "__main__":
-    setup()
     play_notes([["f"],["g"],["a"],["b"],["r"],["c"],["d"],["e"],["f"]])
-    stop_motors()
     #test()
